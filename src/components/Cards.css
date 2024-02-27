@@ -26,6 +26,7 @@
   
   .cards__items {
     margin-bottom: 24px;
+    font-family: "Snell Roundhand, cursive";
   }
   
   .cards__item {
@@ -100,6 +101,7 @@
     color: #252e48;
     font-size: 18px;
     line-height: 24px;
+    font-family: "Snell Roundhand, cursive"
   }
   
   @media only screen and (min-width: 1200px) {

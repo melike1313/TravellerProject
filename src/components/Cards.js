@@ -15,8 +15,8 @@ function Cards() {
           <ul className='cards__items'>
             <CardItem
               src={img9} // İçe aktarılan resmi kullan
-              text='Explore the hidden waterfall deep inside the Amazon Jungle'
-              label='Adventure'
+              text='Paris: Where Love Blossoms in Every Corner'
+              label='Romatic'
               path='/countries'
             />
              <CardItem
@@ -30,20 +30,20 @@ function Cards() {
             <CardItem
               src={img3}
               text='Rome: Where History Comes Alive!'
-              label='Mystery'
+              label='History'
               path='/countries'
             />
             <CardItem
               src={img4}  
-              text='Experience Football on Top of the Himilayan Mountains'
-              label='Adventure'
-              path='/products'
+              text='London: Where History Beckons and Adventures Await!'
+              label='Mysterious'
+              path='/explore'
             />
             <CardItem
               src={img8}    
               text='
               Maldives: Paradise Found, Serenity Unleashed!'
-              label='Adrenaline'
+              label='Relax'
               path='/sign-up'
             />
           </ul>
