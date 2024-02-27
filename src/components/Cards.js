@@ -2,14 +2,14 @@ import React from 'react';
 import './Cards.css';
 import CardItem from './CardItem';
 import img9 from '../images/img-9.jpg'; // Resmi içe aktar
-import img2 from '../images/img-2.jpg'; // Resmi içe aktar
-import img3 from '../images/img-3.jpg'; // Resmi içe aktar
+import img2 from '../images/new york.jpg'; // Resmi içe aktar
+import img3 from '../images/Roma.jpg'; // Resmi içe aktar
 import img4 from '../images/img-4.jpg'; // Resmi içe aktar
-import img8 from '../images/img-8.jpg'; // Resmi içe aktar  
+import img8 from '../images/Maldives.jpg'; // Resmi içe aktar  
 function Cards() {
   return (
     <div className='cards'>
-      <h1>Check out these EPIC Destinations!</h1>
+      <h1 className='font'>Popular Destinations !</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
           <ul className='cards__items'>
@@ -21,7 +21,7 @@ function Cards() {
             />
              <CardItem
               src={img2}
-              text='Travel through the Islands of Bali in a Private Cruise'
+              text='Discover the Magic of New York: Where Dreams Take Flight!'
               label='Luxury'
               path='/countries'
             />
@@ -29,7 +29,7 @@ function Cards() {
           <ul className='cards__items'>
             <CardItem
               src={img3}
-              text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
+              text='Rome: Where History Comes Alive!'
               label='Mystery'
               path='/countries'
             />
@@ -41,7 +41,8 @@ function Cards() {
             />
             <CardItem
               src={img8}    
-              text='Ride through the Sahara Desert on a guided camel tour'
+              text='
+              Maldives: Paradise Found, Serenity Unleashed!'
               label='Adrenaline'
               path='/sign-up'
             />

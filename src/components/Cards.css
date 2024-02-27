@@ -3,10 +3,13 @@
     background: #fff;
   }
   
-  h1 {
+  .font  {
     text-align: center;
+    font-family: "Lucida Handwriting", cursive;
   }
   
+ 
+
   .cards__container {
     display: flex;
     flex-flow: column;
