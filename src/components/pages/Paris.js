@@ -3,6 +3,9 @@ import "../../App.css";
 import "../Paris.css";
 import { Link } from 'react-router-dom';
 import louvreImage from '../../images/Louvre.jpg';
+import EyfelKulesi from '../../images/Eyfel.jpg';
+import PalaisMuze from '../../images/Palais.jpg';
+import Disney from '../../images/Disneyland.jpg';
 
 
 const Paris = () => {
@@ -21,18 +24,15 @@ const Paris = () => {
             </Link>
           </div>
           <div className="info-box">
-            <h2>Louvre Müzesi</h2>
-            <p>Louvre Müzesi, dünyanın en büyük sanat müzelerinden biridir.</p>
+          <img src={EyfelKulesi} alt="Louvre Müzesi" />
           </div>
         </div>
         <div className="paris-info-right">
           <div className="info-box">
-            <h2>Montmartre</h2>
-            <p>Montmartre, sanatçılar ve bohem hayat tarzıyla ünlüdür. </p>
+          <img src={PalaisMuze} alt="Palais Müzesi" />
           </div>
           <div className="info-box">
-            <h2>Champs-Élysées</h2>
-            <p>Champs-Élysées, Paris'in en ünlü caddelerinden biridir.</p>
+          <img src={Disney} alt="Disneyland" />
           </div>
         </div>
       </div>
