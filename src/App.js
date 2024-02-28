@@ -6,11 +6,10 @@ import Home from './components/pages/Home';
 import Countries from './components/pages/Countries';
 import Explore from './components/pages/Explore';
 import SignUp from './components/pages/SignUp';
-<<<<<<< HEAD
 import Paris from './components/pages/Paris';
+import Louvre from './components/pages/Louvre';
 
-=======
->>>>>>> 9efa451562b57829aa34886fb3a654ccf49625c4
+
 
 function App() {
   return (
@@ -21,10 +20,10 @@ function App() {
         <Route path='/countries' element={<Countries />} />
         <Route path='/explore' element={<Explore />} />
         <Route path='/sign-up' element={<SignUp />} />
-<<<<<<< HEAD
+
         <Route path='/paris' element={<Paris />} />
-=======
->>>>>>> 9efa451562b57829aa34886fb3a654ccf49625c4
+        <Route path='/louvre' element={<Louvre />} />
+
 
       </Routes>
     </Router>

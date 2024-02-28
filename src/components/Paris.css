@@ -1,14 +1,89 @@
-.video-container {
-    position: absolute;
-    top: 60px; /* Navbar'ın yüksekliği */
-    left: 0;
-    width: 100%;
-    height: calc(100% - 60px); /* Navbar'ın yüksekliğini çıkarın */
-    overflow: hidden;
-  }
-  
-  .video-container video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.paris-container {
+  position: relative;
+}
+
+.paris-video-container {
+  position: fixed;
+  top: 60px; /* Navbar'ın yüksekliği */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 120px); /* Navbar ve footer'ın yüksekliğini çıkarın */
+  overflow: hidden;
+}
+
+.paris-video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.paris-info {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Genişlik 100% olacak */
+}
+
+.paris-info-left,
+.paris-info-right {
+  flex: 1; /* Eşit genişlikte sütunlar */
+}
+
+.paris-info-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Kutuları en üstten başlat */
+  align-items: center;
+}
+
+.paris-info-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Kutuları en üstten başlat */
+  align-items: center;
+}
+
+.info-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 80px; /* Kutu içeriğinin dış kenardan uzaklığı */
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px; /* Örneğin */
+  height: 250px; /* Örneğin */
+  position: relative;
+}
+
+
+.info-box h2 {
+  margin-bottom: 10px;
+  margin-top: 0%;
+  text-align: initial; /* Başlıkları ortala */
+  align-self: flex-start; /* Başlıkları kutunun en üstüne hizala */
+}
+
+.info-box p {
+  margin: 0;
+  text-align: center; /* Paragrafları ortala */
+}
+
+/* Kutucukların arasında boşluk bırakma */
+.info-box:not(:last-child) {
+  margin-bottom: 40px;
+}
+.info-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
