@@ -17,7 +17,11 @@ function Cards() {
               src={img9} // İçe aktarılan resmi kullan
               text='Paris: Where Love Blossoms in Every Corner'
               label='Romatic'
+<<<<<<< HEAD
               path='/paris'
+=======
+              path='/countries'
+>>>>>>> 9efa451562b57829aa34886fb3a654ccf49625c4
             />
              <CardItem
               src={img2}

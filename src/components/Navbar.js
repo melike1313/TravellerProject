@@ -49,7 +49,11 @@ function Navbar() {
               </Link>
             </li>
             <li className='nav-item'>
+<<<<<<< HEAD
               <Link to='/explore' className='nav-links'onClick={closeMobileMenu} >
+=======
+              <Link to='/explore' className='nav-links'>
+>>>>>>> 9efa451562b57829aa34886fb3a654ccf49625c4
                 Explore
               </Link>
             </li>
