@@ -1,90 +1,179 @@
 .paris-container {
   position: relative;
-}
-
-.paris-video-container {
+ }
+ 
+ .paris-video-container {
   position: fixed;
-  top: 60px; /* Navbar'ın yüksekliği */
+  top: 60px;
   left: 0;
   width: 100%;
-  height: calc(100% - 120px); /* Navbar ve footer'ın yüksekliğini çıkarın */
+  height: calc(100% - 120px);
   overflow: hidden;
-}
-
-.paris-video-container video {
+ }
+ 
+ .paris-video-container video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.paris-info {
-  position: fixed;
-  top: 50%;
-  left: 50%;
+ }
+ 
+ .paris-info {
+  position:fixed;
+  top: 40%;
+  left: 48%;
   transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%; /* Genişlik 100% olacak */
-}
+  width: 30%;
+  height: 30%;
 
-.paris-info-left,
-.paris-info-right {
-  flex: 1; /* Eşit genişlikte sütunlar */
-}
+ }
+ 
 
-.paris-info-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Kutuları en üstten başlat */
-  align-items: center;
-}
-
-.paris-info-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Kutuları en üstten başlat */
-  align-items: center;
-}
-
-.info-box {
+ .paris-info .slick-slider {
+  padding: 0 81px; /* Adjust the padding as needed to create space between items */
+ }
+ 
+ .info-box {
+  box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 80px; /* Kutu içeriğinin dış kenardan uzaklığı */
-  margin: 10px;
-  border-radius: 10px;
+  padding: 80px;
+  border-radius: 10px; /* Ensures the corners are rounded */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 250px; /* Örneğin */
-  height: 250px; /* Örneğin */
+  justify-content: center;
+  width: 300px;
+  height: 400px;
   position: relative;
-}
-
-
-.info-box h2 {
+ }
+ 
+ .info-box h2 {
   margin-bottom: 10px;
   margin-top: 0%;
-  text-align: initial; /* Başlıkları ortala */
-  align-self: flex-start; /* Başlıkları kutunun en üstüne hizala */
-}
-
-.info-box p {
+  text-align: initial;
+  align-self: flex-start;
+ 
+ }
+ 
+ .info-box p {
   margin: 0;
-  text-align: center; /* Paragrafları ortala */
-}
-
-/* Kutucukların arasında boşluk bırakma */
-.info-box:not(:last-child) {
+  text-align: center;
+ }
+ 
+ .info-box:not(:last-child) {
   margin-bottom: 40px;
-}
-.info-box img {
+ }
+ 
+ .info-box img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100%; /* Ensures the image takes the full width of the container */
+  height: 100%; /* Ensures the image takes the full height of the container */
   object-fit: cover;
   border-radius: 10px;
   
+ }
+ 
+ .info-box img:hover {
+  transform: scale(1.1); /* Resimlere somutlaştırma efekti ekleme */
+ }
+ 
+ 
+ .slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+  
+ }
+ 
+ .slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+ 
+ }
+ 
+ .slick-list:focus {
+  outline: none;
+ }
+ 
+ .slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+ }
+ 
+ .slick-slider .slick-track,
+ .slick-slider .slick-list {
+  transform: translate3d(0, 0, 0);
+ }
+ 
+ .slick-arrow.slick-hidden {
+  display: none;
+ }
+ 
+ .slick-prev,
+ .slick-next {
+  display: none; /* Okları gizleme */
+ 
+ }
+ 
+ .slick-dots {
+  display: none; /* Dots'ları gizleme */
+ }
+
+ .paris-info img {
+  width: 300px; /* Kutunun genişliğini ayarlar */
+  height: 400px;
+
+}
+
+
+
+.slick-dots-custom {
+  position: fixed;
+  bottom: 25px; /* Dots'ları box'ın altına taşır */
+  width: 100%; /* Konteynırın genişliğini maksimuma çıkarır */
+  display: flex;
+  align-items: center; /* Dots'ları yatay olarak ortalar */
+  justify-content: center; /* Dots'ları dikey olarak ortalar */
+  top: 10;
+  left: 10px;
+}
+
+.hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000; /* Metnin rengini ayarlar */
+  font-size: 20px; /* Metnin boyutunu ayarlar */
+  background-color: transparent;
+  padding: 50px; /* Metnin etrafındaki boşluğu ayarlar */
+  border-radius: 5px; /* Metnin köşelerini yuvarlar */
+  text-align: center; /* Metni merkeze hizalar */
+}
+
+.hover-text {
+  color: hsl(31, 94%, 13%);
+  font-size: 20px;
+  font-weight: bold;
+  font-family: monospace;
+  letter-spacing: 7px;
+  cursor: pointer;
+  transition: 0.1s ease-out;
+}
+
+.hover-text:hover {
+  color: #523602;
+  text-shadow: 0 0 20px #dcd2d2, 0 0 20px #533202, 0 0 40px #f5f51856;
 }
