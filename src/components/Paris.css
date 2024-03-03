@@ -73,6 +73,7 @@
   object-fit: cover;
   border-radius: 10px;
   
+  
  }
  
  .info-box img:hover {
@@ -91,6 +92,7 @@
   -webkit-touch-callout: none;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
+  width: 100%;
   
  }
  
