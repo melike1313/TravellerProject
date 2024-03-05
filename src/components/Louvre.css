@@ -1,0 +1,104 @@
+
+
+.louvre-page {
+    display: flex;
+    flex-direction: column; /* Yatay bir düzen oluşturur */
+    justify-content: center; /* İçerikleri yatay olarak merkezler */
+    align-items: center; /* İçerikleri dikey olarak merkezler */
+    background-color: #ddddb8;
+    height: 100vh; /* Ekranın tamamını kapsar */
+    padding: 20px;
+}
+
+@keyframes fadeInLeft {
+    from {
+       opacity: 0;
+       transform: translateX(-50px);
+    }
+    to {
+       opacity: 1;
+       transform: translateX(0);
+    }
+   }
+   
+   .left-content {
+    padding: 5%;
+    height: 20%;
+    width: 45%;
+    text-align: left;
+    animation: fadeInLeft 1s ease-out;
+    margin-top: 500px;
+   }
+   
+   .left-content h1 {
+    color: #333;
+    font-size: 2.5em;
+   }
+   
+   .left-content p {
+    color: #666;
+
+    font-size: 1.2em;
+   }
+   
+   .right-content {
+    width: 45%;
+    text-align: center;
+   }
+   
+   .right-content img {
+    
+    width: 100%;
+    max-width: 400px;
+    height: 100%;;
+    border-radius: 10px;
+    margin-top: 500px;
+   }
+
+
+   .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px; /* İçerikler arasındaki boşluğu ayarlar */
+}
+
+.content-wrapper1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px; /* İçerikler arasındaki boşluğu ayarlar */
+}
+/* Yeni eklenen sol içerik */
+.new-left-content {
+    width: 45%;
+    text-align: left;
+    animation: fadeInLeft 1s ease-out;
+    margin-top: 230px;
+}
+
+.new-left-content h1 {
+    color: #333;
+    font-size: 2.5em;
+}
+
+.new-left-content p {
+    color: #666;
+    font-size: 1.2em;
+}
+
+/* Yeni eklenen sağ içerik */
+.new-right-content {
+    width: 45%;
+    text-align: center;
+}
+
+.new-right-content img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 150px ;
+    border-radius: 10px;
+}

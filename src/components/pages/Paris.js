@@ -11,8 +11,9 @@ import PalaisMuze from '../../images/Palais.jpg';
 import Disney from '../../images/Disneyland.jpg';
 
 const Paris = () => {
-  const [isHovered, setIsHovered] = useState(false);
-  const settings = {
+ const [hoveredItem, setHoveredItem] = useState(null); // Track the currently hovered item
+
+ const settings = {
     dots: true,
     infinite: true,
     speed: 500,
@@ -21,62 +22,50 @@ const Paris = () => {
     dotsClass: "slick-dots slick-dots-custom",
     responsive: [
       {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1
-        }
-      },
-      {
-        breakpoint: 480,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
         }
       }
     ]
-  };
+ };
 
-  return (
+ return (
     <div className="paris-container">
       <div className="paris-video-container">
         <video className="paris-video" src="/videos/ParisVideo.mp4" autoPlay loop muted />
       </div>
       <div className="paris-info">
         <Slider {...settings}>
-          <div className="info-box"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
+          <div className="info-box" onMouseEnter={() => setHoveredItem('louvre')} onMouseLeave={() => setHoveredItem(null)}>
             <Link to="/louvre">
-              <img src={louvreImage} alt="Louvre Müzesi" />
+              <img src={louvreImage} alt="Louvre Museum" />
             </Link>
-            {isHovered && <div className="hover-text"> <p>Louvre Müzesi</p>
-              <p>Paris, Fransa</p>
-              <p>Dünyanın en büyük sanat müzesi</p>
-            </div>}
+            {hoveredItem === 'louvre' && <div className="hover-text">Louvre Museum</div>}
           </div>
-          <div className="info-box">
-            <img src={EyfelKulesi} alt="Eyfel Kulesi" />
+          <div className="info-box" onMouseEnter={() => setHoveredItem('eyfel')} onMouseLeave={() => setHoveredItem(null)}>
+            <Link to="/eyfel">
+              <img src={EyfelKulesi} alt="Eifell Tower" />
+            </Link>
+            {hoveredItem === 'eyfel' && <div className="hover-text">Eiffel Tower</div>}
           </div>
-          <div className="info-box">
-            <img src={PalaisMuze} alt="Palais Müzesi" />
+          <div className="info-box" onMouseEnter={() => setHoveredItem('palais')} onMouseLeave={() => setHoveredItem(null)}>
+            <Link to="/palais">
+              <img src={PalaisMuze} alt="Palais Museum" />
+            </Link>
+            {hoveredItem === 'palais' && <div className="hover-text">Palais Museum</div>}
           </div>
-          <div className="info-box">
-            <img src={Disney} alt="Disneyland" />
+          <div className="info-box" onMouseEnter={() => setHoveredItem('disney')} onMouseLeave={() => setHoveredItem(null)}>
+            <Link to="/disney">
+              <img src={Disney} alt="Disneyland" />
+            </Link>
+            {hoveredItem === 'disney' && <div className="hover-text">Disneyland</div>}
           </div>
         </Slider>
       </div>
     </div>
-  );
+ );
 };
 
 export default Paris;

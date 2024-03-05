@@ -8,8 +8,9 @@ import Explore from './components/pages/Explore';
 import SignUp from './components/pages/SignUp';
 import Paris from './components/pages/Paris';
 import Louvre from './components/pages/Louvre';
-
-
+import DisneyLand from './components/pages/DisneyLand';
+import Palais from './components/pages/Palais';
+import Eyfel from './components/pages/Eyfel';
 
 function App() {
   return (
@@ -23,8 +24,9 @@ function App() {
 
         <Route path='/paris' element={<Paris />} />
         <Route path='/louvre' element={<Louvre />} />
-
-
+        <Route path='/disney' element={<DisneyLand />} />
+        <Route path='/eyfel' element={<Eyfel />} />
+       <Route path='/palais' element={<Palais />} />
       </Routes>
     </Router>
   );
