@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from "react";
+
 import "../Louvre.css"; // Louvre.css dosyasını içe aktar
-import autoAnimate from "@formkit/auto-animate";
+
 
 import LouvreImage from "../../images/LouvreM.jpg";
 import LouvreImg from "../../images/LouvreImg.jpg";
@@ -12,13 +12,7 @@ import SphinxImg from "../../images/Sphinx1.jpg";
 import SphinxImg1 from "../../images/sphinx.jpg";
 
 function Louvre() {
-  const leftContentRef = useRef(null);
 
-  useEffect(() => {
-    if (leftContentRef.current) {
-      autoAnimate(leftContentRef.current);
-    }
-  }, []);
 
   return (
     <div className="t-info">
