@@ -18,7 +18,7 @@ function Louvre() {
     <div className="t-info">
       <h2>
         <span id="diff">U</span>nveiling the Louvre: Masterpieces Revealed
-        <hr />
+        
       </h2>
       <div className="t-row">
         <div className="infobox module">
@@ -27,7 +27,7 @@ function Louvre() {
               <h2>
                 <span id="diff">T</span>he Louvre Uncovered: A Journey Through
                 Masterpieces
-                <hr />
+                
               </h2>
               <p>
                 "Louvre Unveiled: Revealing the Enchantment of Timeless
@@ -57,7 +57,7 @@ function Louvre() {
 
       <h2>
         <span id="diff">M</span>ono Lisa
-        <hr />
+       
       </h2>
       <div className="t-row">
         <div className="infobox module">
@@ -66,7 +66,7 @@ function Louvre() {
               <h2>
                 <span id="diff"></span>
                 "Gazing into Mona Lisa's Smile: Unraveling the Mystery"
-                <hr />
+               
               </h2>
               <p>
                 The world’s most famous painting, the Mona Lisa, needs a space
@@ -90,7 +90,7 @@ function Louvre() {
       <hr id="line" />
       <h2>
         <span id="diff">A</span> STAIRWAY TO VICTORY
-        <hr />
+       
       </h2>
       <div className="t-row">
         <div className="infobox module">
@@ -99,7 +99,7 @@ function Louvre() {
               <h2>
                 <span id="diff"></span>
                 " A Stairway to Victory: Ascending to Triumph"
-                <hr id="line-color" />
+              
               </h2>
               <p>
                 The Winged Victory of Samothrace, one of the most famous statues
@@ -124,7 +124,7 @@ function Louvre() {
       <hr id="line" />
       <h2>
         <span id="diff">T</span>he Crypt of the Sphinx
-        <hr />
+   
       </h2>
       <div className="t-row">
         <div className="infobox module">
@@ -133,7 +133,7 @@ function Louvre() {
               <h2>
                 <span id="diff"></span>
                 "Revealing Enigma: The Crypt of the Sphinx"
-                <hr />
+                
               </h2>
               <p>
                 An enigmatic half-human, half-animal creature with the body of a
