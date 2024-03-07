@@ -65,12 +65,12 @@ class Paris extends React.Component {
       this.props.slides.map((slide, index) => /*#__PURE__*/
       React.createElement("div", {
         className: classNames('slider__slide', { 's--active': activeSlide === index, 's--prev': prevSlide === index }),
-        key: slide.city }, /*#__PURE__*/
+        key: slide.location }, /*#__PURE__*/
 
       React.createElement("div", { className: "slider__slide-content" }, /*#__PURE__*/
-      React.createElement("h3", { className: "slider__slide-subheading" }, slide.country || slide.city), /*#__PURE__*/
+      React.createElement("h3", { className: "slider__slide-subheading" }, slide.city || slide.location), /*#__PURE__*/
       React.createElement("h2", { className: "slider__slide-heading" },
-      slide.city.split('')?.map(l => /*#__PURE__*/React.createElement("span", null, l))), /*#__PURE__*/
+      slide.location.split('')?.map(l => /*#__PURE__*/React.createElement("span", null, l))), /*#__PURE__*/
 
       React.createElement("p", { className: "slider__slide-readmore" }, "read more")), /*#__PURE__*/
 
@@ -93,22 +93,22 @@ class Paris extends React.Component {
 
 const slides = [
 {
-  city: 'Louvre Museum',
-  country: 'Paris',
+  location: 'Louvre Museum',
+  city: 'Paris',
   img: louvreImage },
 
 {
-  city: 'Eiffel Tower',
+  location: 'Eiffel Tower',
   img: EyfelKulesi },
 
 {
-  city: 'Palais',
-  country: 'Paris',
+  location: 'Palais',
+  city: 'Paris',
   img: PalaisMuze },
 
 {
-  city: 'Disneyland',
-  country: 'Paris',
+  location: 'Disneyland',
+  city: 'Paris',
   img: Disney },
 ];
 
