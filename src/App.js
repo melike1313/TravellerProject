@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ReactDOM from 'react-dom';
 import Home from './components/pages/Home';
 import Countries from './components/pages/Countries';
 import Explore from './components/pages/Explore';
@@ -31,5 +32,6 @@ function App() {
     </Router>
   );
 }
+ReactDOM.render(<App />, document.getElementById('root'));
 
 export default App;
