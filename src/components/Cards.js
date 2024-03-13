@@ -18,6 +18,7 @@ function Cards() {
               text='Paris: Where Love Blossoms in Every Corner'
               label='Romatic'
               path='/paris'
+
             />
              <CardItem
               src={img2}

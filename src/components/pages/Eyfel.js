@@ -1,3 +1,4 @@
+
 import "../Eyfel.css"; // Louvre.css dosyasını içe aktar
 
 import EiffelTower from '../../images/Eiffel.jpg';
@@ -175,3 +176,4 @@ function Eyfel() {
 }
 
 export default Eyfel;
+

@@ -1,3 +1,4 @@
+
 import "../DisneyLand.css"; // Louvre.css dosyasını içe aktar
 
 import Disneyland from '../../images/Disneyland.jpg';
@@ -174,3 +175,4 @@ function DisneyLand() {
 }
 
 export default DisneyLand;
+

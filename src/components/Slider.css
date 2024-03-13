@@ -1,0 +1,30 @@
+/* Slider Container */
+.slider-container {
+    overflow: hidden;
+    height: 200px; /* Slider yüksekliğini istediğiniz değere ayarlayın */
+  }
+  
+  /* Slider */
+  .slider {
+    display: flex;
+    flex-direction: column-reverse; /* Yönü yukarıya çevir */
+    transition: transform 0.5s ease;
+  }
+  
+  /* Slider Elemanları */
+  .slider a {
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  .slider a:hover {
+    background-color: #ddd;
+  }
+  
