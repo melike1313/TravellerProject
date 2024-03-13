@@ -79,11 +79,12 @@ body {
   letter-spacing: 12px;
 }
 .slider__slide-heading span {
-  display: block;
+  display: inline-block;
   opacity: 0;
   transform: translateY(-60px);
   transition: all 0.3333333333s;
 }
+
 .slider__slide.s--prev .slider__slide-heading span {
   transform: translateY(60px);
 }

@@ -32,7 +32,7 @@ function Cards() {
               src={img3}
               text='Rome: Where History Comes Alive!'
               label='History'
-              path='/countries'
+              path='/roma'
             />
             <CardItem
               src={img4}  

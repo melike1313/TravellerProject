@@ -13,6 +13,8 @@ import Louvre from './components/pages/Louvre';
 import DisneyLand from './components/pages/DisneyLand';
 import Palais from './components/pages/Palais';
 import Eyfel from './components/pages/Eyfel';
+import France from './components/pages/France';
+import Roma from './components/pages/Roma';
 
 import CanadaPage from './components/pages/CanadaPage';
 import Toronto from './components/pages/Toronto';
@@ -22,7 +24,7 @@ import LosAngles from './components/pages/LosAngeles';
 import LasVegas from './components/pages/LasVegas';
 import Miami from './components/pages/Miami';
 import SanFrancisco from './components/pages/SanFrancisco';
-import France from './components/pages/France';
+
 
 function App() {
   return (
@@ -38,6 +40,7 @@ function App() {
         <Route path='/disney' element={<DisneyLand />} />
         <Route path='/eyfel' element={<Eyfel />} />
        <Route path='/palais' element={<Palais />} />
+       <Route path='/roma' element={<Roma />} />
 
        <Route path="/countries/canada" element={<CanadaPage />} />
         <Route path="/canada/Toronto" element={<Toronto />} />

@@ -1,21 +1,21 @@
 import React, { Component } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../App.css";
-import "../Paris.css";
+import "../Roma.css";
 import classNames from "classnames";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import louvreImage from '../../images/Louvre.jpg';
-import EyfelKulesi from '../../images/Eyfel.jpg';
-import PalaisMuze from '../../images/Palais.jpg';
-import Disney from '../../images/Disneyland.jpg';
+import Collesium from '../../images/Collesium.jpg';
+import Trevi from '../../images/Trevi.jpg';
+import Galleria from '../../images/Galleria.jpeg';
+import Maria from '../../images/Maria.jpg';
 
 // withNavigation yükleyici fonksiyonu
 export const withNavigation = (Component) => {
  return (props) => <Component {...props} navigate={useNavigate()} />;
 };
 
-class Paris extends Component {
+class Roma extends Component {
  constructor(props) {
     super(props);
 
@@ -30,27 +30,28 @@ class Paris extends Component {
       sliderReady: false,
       slides: [
         {
-          id: 'louvre',
-          location: 'Louvre Museum',
-          city: 'Paris',
-          img: louvreImage,
+          id: 'collesium',
+          location: 'Collesium',
+          city: 'Roma',
+          img: Collesium,
         },
         {
-          id: 'eyfel',
-          location: 'Eiffel Tower',
-          img: EyfelKulesi,
+          id: 'trevi',
+          location: 'Trevi Fountain',
+          city: 'Roma',
+          img: Trevi,
         },
         {
-          id: 'palais',
-          location: 'Palais',
-          city: 'Paris',
-          img: PalaisMuze,
+          id: 'galleria',
+          location: 'Galleria Borghese',
+          city: 'Roma',
+          img: Galleria,
         },
         {
-          id: 'disney',
-          location: 'Disneyland',
-          city: 'Paris',
-          img: Disney,
+          id: 'maria',
+          location: 'Basilica di Santa Maria Maggiore',
+          city: 'Roma',
+          img: Maria,
         },
       ],
     };
@@ -124,4 +125,4 @@ class Paris extends Component {
  }
 }
 
-export default withNavigation(Paris);
+export default withNavigation(Roma);

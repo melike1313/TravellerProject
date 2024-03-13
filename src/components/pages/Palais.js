@@ -193,10 +193,10 @@ function Palais() {
       </div>
       <hr id="line" />
       <div className="comment-section">
-        <h2>Yorum Yap ve Puan Ver</h2>
+        <h2>Comment and Rate</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="comment">Yorum:</label>
+            <label htmlFor="comment">Comment:</label>
             <textarea
               id="comment"
               value={comment}
@@ -206,11 +206,11 @@ function Palais() {
             ></textarea>
           </div>
           <div className="form-group">
-            <label htmlFor="rating">Puan:</label>
+            <label htmlFor="rating">Rating:</label>
             <StarRating value={rating} onClick={handleRatingChange} />
           </div>
           <button type="submit" className="submit-btn">
-            Gönder
+            Submit
           </button>
         </form>
       </div>
