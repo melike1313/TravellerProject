@@ -1,6 +1,4 @@
-import React, { Component } from 'react'
-
-
+import React, { useState } from 'react';
 import "../Palais.css"; // Louvre.css dosyasını içe aktar
 import Palais1 from "../../images/Palais1.jpg";
 import Palais2 from "../../images/Palais2.jpg";
@@ -10,8 +8,42 @@ import Artt1 from "../../images/Art1.jpg";
 import Artt2 from "../../images/Art2.jpg";
 import WomenArtt from "../../images/WomenArt1.jpg";
 import WomenArtt1 from "../../images/WomenArt2.jpg";
-function Palais() {
 
+function Palais() {
+  const [comment, setComment] = useState('');
+  const [rating, setRating] = useState(0);
+
+  const handleCommentChange = (event) => {
+    setComment(event.target.value);
+  };
+
+  const handleRatingChange = (value) => {
+    setRating(value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log('Yorum:', comment);
+    console.log('Puan:', rating);
+    setComment('');
+    setRating(0);
+  };
+
+  const StarRating = ({ value, onClick }) => {
+    const stars = [];
+    for (let i = 1; i <= 5; i++) {
+      stars.push(
+        <span
+          key={i}
+          className={value >= i ? 'star-filled' : 'star-empty'}
+          onClick={() => onClick(i)}
+        >
+          ★
+        </span>
+      );
+    }
+    return <div>{stars}</div>;
+  };
 
   return (
     <div className="t-info">
@@ -36,11 +68,6 @@ function Palais() {
               </p>
               <p>
                 Additionally, Le Petit Palais regularly hosts temporary exhibitions. The museum offers visitors the opportunity to explore the history of art and various periods. With its architectural beauty, rich collection, and curated exhibitions, Le Petit Palais is an important part of Paris's cultural life.
-
-
-
-
-
 
               </p>
             </div>
@@ -165,7 +192,28 @@ function Palais() {
         </div>
       </div>
       <hr id="line" />
-
+      <div className="comment-section">
+        <h2>Yorum Yap ve Puan Ver</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="comment">Yorum:</label>
+            <textarea
+              id="comment"
+              value={comment}
+              onChange={handleCommentChange}
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <div className="form-group">
+            <label htmlFor="rating">Puan:</label>
+            <StarRating value={rating} onClick={handleRatingChange} />
+          </div>
+          <button type="submit" className="submit-btn">
+            Gönder
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

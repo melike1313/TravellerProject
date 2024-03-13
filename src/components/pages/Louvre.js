@@ -1,21 +1,49 @@
-
-import React, { Component } from 'react'
-
-
-import "../Louvre.css"; // Louvre.css dosyasını içe aktar
-
-
-import LouvreImage from "../../images/LouvreM.jpg";
-import LouvreImg from "../../images/LouvreImg.jpg";
-import Mono from "../../images/MonoLisa.jpg";
-import MonoLi from "../../images/MonoLisa1.jpg";
-import VictoryStatue from "../../images/Victory.jpg";
-import VictoryStatue2 from "../../images/Victory2.jpg";
-import SphinxImg from "../../images/Sphinx1.jpg";
-import SphinxImg1 from "../../images/sphinx.jpg";
+import React, { useState } from 'react';
+import '../Louvre.css'; // Louvre.css dosyasını içe aktar
+import LouvreImage from '../../images/LouvreM.jpg';
+import LouvreImg from '../../images/LouvreImg.jpg';
+import Mono from '../../images/MonoLisa.jpg';
+import MonoLi from '../../images/MonoLisa1.jpg';
+import VictoryStatue from '../../images/Victory.jpg';
+import VictoryStatue2 from '../../images/Victory2.jpg';
+import SphinxImg from '../../images/Sphinx1.jpg';
+import SphinxImg1 from '../../images/sphinx.jpg';
 
 function Louvre() {
+  const [comment, setComment] = useState('');
+  const [rating, setRating] = useState(0);
 
+  const handleCommentChange = (event) => {
+    setComment(event.target.value);
+  };
+
+  const handleRatingChange = (value) => {
+    setRating(value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log('Yorum:', comment);
+    console.log('Puan:', rating);
+    setComment('');
+    setRating(0);
+  };
+
+  const StarRating = ({ value, onClick }) => {
+    const stars = [];
+    for (let i = 1; i <= 5; i++) {
+      stars.push(
+        <span
+          key={i}
+          className={value >= i ? 'star-filled' : 'star-empty'}
+          onClick={() => onClick(i)}
+        >
+          ★
+        </span>
+      );
+    }
+    return <div>{stars}</div>;
+  };
 
   return (
     <div className="t-info">
@@ -159,10 +187,32 @@ function Louvre() {
         </div>
       </div>
       <hr id="line" />
-      
+      <div className="comment-section">
+        <h2>Yorum Yap ve Puan Ver</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="comment">Yorum:</label>
+            <textarea
+              id="comment"
+              value={comment}
+              onChange={handleCommentChange}
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <div className="form-group">
+            <label htmlFor="rating">Puan:</label>
+            <StarRating value={rating} onClick={handleRatingChange} />
+          </div>
+          <button type="submit" className="submit-btn">
+            Gönder
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
+   
 
 export default Louvre;
 
